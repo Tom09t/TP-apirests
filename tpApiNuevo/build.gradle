@@ -34,6 +34,12 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
+jar {
+	manifest {
+		attributes 'tpApiNuevo': 'com.utn.tpApiNuevo.RestfakeApplication'
+	}
+}
+
 tasks.named('test') {
 	useJUnitPlatform()
 }
